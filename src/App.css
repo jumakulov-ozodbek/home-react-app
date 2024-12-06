@@ -115,15 +115,17 @@ body {
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
+  color: #FFFFFF66;
 }
 
 .suggestions button {
   margin: 5px 5px 0 0;
-  background-color: #333;
-  color: white;
+  background-color:  #1d1e2c;;
   border: none;
   padding: 10px 15px;
   border-radius: 5px;
+  border-color: #fff;
+  color: #FFFFFF66;
   cursor: pointer;
 }
 
