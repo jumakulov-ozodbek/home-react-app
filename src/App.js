@@ -20,13 +20,14 @@ function App() {
       </header>
 
       <main className="main-content">
-        <div className="image-section">
-          <img
-            src="/student.png"
-            alt="Student"
-            className="student-image"
-          />
-        </div>
+      <div className="image-section">
+  <img
+    src="/assets/student.png"
+    alt="Student"
+    className="student-image"
+  />
+</div>
+
         <div className="text-section">
           <h1>
             Grow Your Skills <br />

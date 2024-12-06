@@ -1,3 +1,4 @@
+/* Asosiy uslublar */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -48,6 +49,7 @@ nav ul li {
   border-radius: 4px;
 }
 
+/* Asosiy mazmun */
 .main-content {
   display: flex;
   align-items: center;
@@ -55,20 +57,20 @@ nav ul li {
 }
 
 .image-section {
-  flex: 1; /* Rasm uchun ajratilgan joy */
+  flex: 1;
   display: flex;
   justify-content: center;
 }
 
 .student-image {
-  max-width: 80%; /* Rasm o'lchami */
+  max-width: 80%;
   height: auto;
   border-radius: 10px;
 }
 
 .text-section {
-  flex: 2; /* Matn uchun ajratilgan joy */
-  padding-left: 40px; /* Rasm va matn o'rtasidagi bo'shliq */
+  flex: 2;
+  padding-left: 40px;
 }
 
 .text-section h1 {
@@ -116,4 +118,24 @@ nav ul li {
   color: #fff;
   border-radius: 4px;
   cursor: pointer;
+}
+
+/* Media Query */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text-section {
+    padding-left: 0;
+  }
+
+  .student-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
 }
