@@ -2,7 +2,7 @@
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background-color: #1d1e2c;
+  background-color: #1F2143;
   color: white;
 }
 
@@ -87,24 +87,25 @@ body {
 
 .search-bar {
   display: flex;
-  gap: 10px;
+  gap: 8rem;
 }
 
 .search-bar input {
   flex: 1;
   padding: 10px;
   font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  border: 1px solid  #1F2143;
+  border-radius: 8px;
 }
 
 .search-bar button {
-  background-color: #ff5757;
-  color: white;
+  background-color: #1F2143;
+  color: #1F2143;
   border: none;
   padding: 10px 16px;
   border-radius: 5px;
   cursor: pointer;
+  
 }
 
 .suggestions {
@@ -120,12 +121,13 @@ body {
 
 .suggestions button {
   margin: 5px 5px 0 0;
-  background-color:  #1d1e2c;;
-  border: none;
+  background-color:  #1F2143;
   padding: 10px 15px;
+  border-width: 1px;
+  border-style: solid;
   border-radius: 5px;
-  border-color: #fff;
-  color: #FFFFFF66;
+  border-color: #6e6d75;
+  color: #ffffff66;
   cursor: pointer;
 }
 
