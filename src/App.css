@@ -85,28 +85,73 @@ body {
   color: #FFFFFF66;
 }
 
-.search-bar {
-  display: flex;
-  gap: 8rem;
+/* Form konteyner */
+form {
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-.search-bar input {
-  flex: 1;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid  #1F2143;
-  border-radius: 8px;
+/* Label (ekranda ko'rinmaydi) */
+label {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280; /* Gray-500 */
+  display: none; /* Ekranda ko'rinmaslik uchun */
 }
 
-.search-bar button {
-  background-color: #1F2143;
-  color: #1F2143;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 5px;
+/* Input maydoni */
+input[type="search"] {
+  display: block;
+  width: 100%;
+  padding: 1rem 2.5rem 1rem 2.5rem; /* Ikkita tomoniga qo'shimcha bo'sh joy */
+  font-size: 0.875rem; /* Matn kattaligi */
+  color: #111827; /* Gray-900 */
+  border: 1px solid #d1d5db; /* Gray-300 */
+  border-radius: 0.5rem; /* O'ralgan burchak */
+  background-color: #f9fafb; /* Gray-50 */
+  transition: all 0.2s ease-in-out; /* Fokusta o'tish animatsiyasi */
+}
+
+input[type="search"]:focus {
+  outline: none;
+  border-color: #3b82f6; /* Blue-500 */
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2); /* Fokusta ko'k soyani ko'rsatish */
+  background-color: #fff; /* Fokusda oq rang */
+}
+
+/* Tungi rejim uchun qo'llab-quvvatlash */
+input[type="search"].dark {
+  background-color: #374151; /* Gray-700 */
+  border-color: #4b5563; /* Gray-600 */
+  color: #f9fafb; /* White */
+}
+
+input[type="search"].dark:placeholder {
+  color: #9ca3af; /* Gray-400 */
+}
+
+/* Qidiruv belgisini joylashtirish */
+.search__div {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.75rem;
   cursor: pointer;
-  
 }
+
+/* SVG ikonkasi */
+.search__div svg {
+  width: 1rem;
+  height: 1rem;
+  color: #6b7280; /* Gray-500 */
+  transition: color 0.2s ease-in-out;
+}
+
+.search__div:hover svg {
+  color: #3b82f6; /* Blue-500 */
+}
+
+  
 
 .suggestions {
   margin-top: 20px;
