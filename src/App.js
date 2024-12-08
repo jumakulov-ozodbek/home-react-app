@@ -35,7 +35,7 @@ function App() {
             Career Path.
           </h1>
           <p>We have something big for you who want to level up!</p>
-         
+          <Input/>
           <div className="suggestions">
             <span>Suggestions:</span>
             <button className="active">UI UX Design</button>
@@ -47,7 +47,7 @@ function App() {
           </div>
         </div>
       </main>
-      <Input/>
+    
     </div>
   );
 }
