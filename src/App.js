@@ -43,7 +43,7 @@ function App() {
       />
       <button
         type="submit"
-        className="absolute top-1/2 right-3 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="absolute top-1/2 right-2 transform -translate-y-1/2 bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
