@@ -85,28 +85,6 @@ body {
   color: #FFFFFF66;
 }
 
-form {
-  position: relative;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-input[type="search"] {
-  width: 100%;
-  padding: 1rem 3rem 1rem 1.5rem;
-  font-size: 0.875rem;
-  color: #d1d5db; /* Light Gray */
-  background-color: #1f2937; /* Gray-800 */
-  border: none;
-  border-radius: 9999px; /* Full-rounded */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  outline: none;
-  transition: all 0.2s ease-in-out;
-}
-
-input[type="search"]:focus {
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Blue-500 focus effe/ct */
-}
 
 
 
@@ -125,7 +103,7 @@ input[type="search"]:focus {
   color: #FFFFFF66;
 }
 
-.suggestions button {
+.suggestions .active {
   margin: 5px 5px 0 0;
   background-color:  #1F2143;
   padding: 10px 15px;
