@@ -80,27 +80,28 @@ function App() {
           <div className="w-full max-w-xl">
             <SearchInput />
           </div>
-
           <div className="space-y-8">
-            <span className="block text-gray-400">Suggestions:</span>
-            <div className="flex  flex-wrap gap-4  mt-8">
-              {[
-                "UI UX Design",
-                "CSS Fundamental",
-                "3D Design Illustration",
-                "Website Development",
-                "Logo Design",
-                "Icon Design",
-              ].map((suggestion) => (
-                <button
-                  key={suggestion}
-                  className=" text-gray-300 px-3 py-2 border border-gray-300 rounded-md  bg-[#282B57] p-4 text-sm hover:bg-blue-600 hover:text-white transition-all duration-300"
-                >
-                  {suggestion}
-                </button>
-              ))}
-            </div>
-          </div>
+  <span className="block text-gray-400">Suggestions:</span>
+  <div className="flex flex-wrap gap-4 mt-8">
+    {[
+      { label: "UI UX Design", width: "150px" },
+      { label: "CSS Fundamental", width: "170px" },
+      { label: "3D Design Illustration", width: "200px" },
+      { label: "Website Development", width: "180px" },
+      { label: "Logo Design", width: "130px" },
+      { label: "Icon Design", width: "120px" },
+    ].map((suggestion) => (
+      <button
+        key={suggestion.label}
+        style={{ width: suggestion.width }}
+        className="text-gray-300 px-3 py-2 border border-gray-300 rounded-md bg-[#282B57] text-sm hover:bg-blue-600 hover:text-white transition-all duration-300"
+      >
+        {suggestion.label}
+      </button>
+    ))}
+  </div>
+</div>
+
         </div>
       </main>
     </div>
