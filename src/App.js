@@ -1,56 +1,99 @@
-import React from "react";
-import "./App.css";
-import Input from './Input'
+import React, { useState } from "react";
+
+const SearchInput = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+
+  const handleSearch = () => {
+    console.log('Searching for:', searchTerm);
+  };
+
+  return (
+    <div className="relative w-full">
+      <input
+        type="text"
+        placeholder="What do you want to learn..."
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        className="w-full px-4 py-3 text-gray-300 bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-500"
+        onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+      />
+      <button 
+        onClick={handleSearch}
+        className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-300"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+          <path
+            fillRule="evenodd"
+            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1111.68 3.39l4.36 4.37a1 1 0 01-1.42 1.42l-4.37-4.36A6 6 0 012 8z"
+            clipRule="evenodd"
+          />
+        </svg>
+      </button>
+    </div>
+  );
+};
+
 function App() {
   return (
-    <div className="container">
-      <header className="navbar">
-        <div className="logo">NexLearn</div>
+    <div className="min-h-screen bg-gray-900 text-white">
+      <header className="flex justify-between items-center p-6 container mx-auto">
+        <div className="text-2xl font-bold text-white">NexLearn</div>
         <nav>
-          <ul>
-            <li>Home</li>
-            <li>Courses</li>
-            <li>Pricing</li>
+          <ul className="flex space-x-6">
+            <li className="hover:text-blue-500 cursor-pointer">Home</li>
+            <li className="hover:text-blue-500 cursor-pointer">Courses</li>
+            <li className="hover:text-blue-500 cursor-pointer">Pricing</li>
           </ul>
         </nav>
-        <div className="login-section">
-          <span>Eng 🌐</span>
-          <button className="login-btn">Login</button>
+        <div className="flex items-center space-x-4">
+          <span className="text-lg">Eng 🌐</span>
+          <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">
+            Login
+          </button>
         </div>
       </header>
 
-      <main className="main-content">
-        <div className="image-section">
-          <img
-            src="/assets/student.png"
-            alt="Student"
-            className="student-image"
-          />
-        </div>
-
-        <div className="text-section">
-          <h1>
+      <main className="container mx-auto flex items-center justify-between px-6 py-12">
+        <div className="w-1/2 space-y-6">
+          <h1 className="text-5xl font-bold leading-tight">
             Grow Your Skills <br />
             To Advance Your <br />
             Career Path.
           </h1>
-          <p>We have something big for you who want to level up!</p>
-          <Input/>
-          <div className="suggestions">
-            <span>Suggestions:</span>
-            <button className="active">UI UX Design</button>
-            <button className="active">CSS Fundamental</button>
-            <button className="active">3D Design Illustration</button>
-            <button className="active">Website Development</button>
-            <button className="active">Logo Design</button>
-            <button className="active">Icon Design</button>
+          <p className="text-xl text-gray-400">
+            We have something big for you who want to level up!
+          </p>
+
+          <div className="w-full max-w-xl">
+            <SearchInput />
+          </div>
+
+          <div className="space-y-3">
+            <span className="block text-gray-400">Suggestions:</span>
+            <div className="flex flex-wrap gap-2">
+              {['UI UX Design', 'CSS Fundamental', '3D Design Illustration', 
+                'Website Development', 'Logo Design', 'Icon Design'].map((suggestion) => (
+                <button 
+                  key={suggestion} 
+                  className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm hover:bg-blue-700 hover:text-white transition"
+                >
+                  {suggestion}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
+
+        <div className="w-1/2 flex justify-center">
+          <img
+            src="/assets/student.png"
+            alt="Student"
+            className="max-w-full h-auto object-contain"
+          />
+        </div>
       </main>
-    
     </div>
   );
 }
-
 
 export default App;
