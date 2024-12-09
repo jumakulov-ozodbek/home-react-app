@@ -38,7 +38,7 @@ const SearchInput = () => {
   );
 };
 
-function App() {
+function Navbar() {
   return (
     <div className="min-h-screen bg-[#1F2143] text-white">
       <header className="flex justify-between items-center p-6 container mx-auto">
@@ -108,4 +108,4 @@ function App() {
   );
 }
 
-export default App;
+export default Navbar;
