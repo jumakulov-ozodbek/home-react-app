@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 const SearchInput = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleSearch = () => {
-    console.log('Searching for:', searchTerm);
+    console.log("Searching for:", searchTerm);
   };
 
   return (
@@ -15,13 +15,18 @@ const SearchInput = () => {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
         className="w-full px-4 py-3 text-gray-300 bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-500"
-        onKeyPress={(e) => e.key === 'Enter' && handleSearch()}
+        onKeyPress={(e) => e.key === "Enter" && handleSearch()}
       />
-      <button 
+      <button
         onClick={handleSearch}
         className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-300"
       >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" viewBox="0 0 20 20" fill="currentColor">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          viewBox="0 0 20 20"
+          fill="currentColor"
+        >
           <path
             fillRule="evenodd"
             d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1111.68 3.39l4.36 4.37a1 1 0 01-1.42 1.42l-4.37-4.36A6 6 0 012 8z"
@@ -53,8 +58,18 @@ function App() {
         </div>
       </header>
 
-      <main className="container mx-auto flex items-center justify-between px-6 py-12">
-        <div className="w-1/2 space-y-6">
+      <main className="container mx-auto flex items-center px-6 py-12">
+        {/* Chap tomondagi rasm */}
+        <div className="w-1/2">
+          <img
+            src="/assets/student.png"
+            alt="Student"
+            className="max-w-full h-auto object-contain"
+          />
+        </div>
+
+        {/* O'ng tomondagi matn va qidiruv qismi */}
+        <div className="w-1/2 space-y-6 pl-12">
           <h1 className="text-5xl font-bold leading-tight">
             Grow Your Skills <br />
             To Advance Your <br />
@@ -71,10 +86,16 @@ function App() {
           <div className="space-y-3">
             <span className="block text-gray-400">Suggestions:</span>
             <div className="flex flex-wrap gap-2">
-              {['UI UX Design', 'CSS Fundamental', '3D Design Illustration', 
-                'Website Development', 'Logo Design', 'Icon Design'].map((suggestion) => (
-                <button 
-                  key={suggestion} 
+              {[
+                "UI UX Design",
+                "CSS Fundamental",
+                "3D Design Illustration",
+                "Website Development",
+                "Logo Design",
+                "Icon Design",
+              ].map((suggestion) => (
+                <button
+                  key={suggestion}
                   className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm hover:bg-blue-700 hover:text-white transition"
                 >
                   {suggestion}
@@ -82,14 +103,6 @@ function App() {
               ))}
             </div>
           </div>
-        </div>
-
-        <div className="w-1/2 flex justify-center">
-          <img
-            src="/assets/student.png"
-            alt="Student"
-            className="max-w-full h-auto object-contain"
-          />
         </div>
       </main>
     </div>
