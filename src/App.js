@@ -14,16 +14,16 @@ const SearchInput = () => {
         placeholder="What do you want to learn..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-full px-4 py-3 text-gray-300 bg-gray-800 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-500"
+        className="w-[90%] px-8 py-4 text-gray-300 bg-[#282B57] rounded-md shadow-md "
         onKeyPress={(e) => e.key === "Enter" && handleSearch()}
       />
       <button
         onClick={handleSearch}
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-300"
+        className="absolute left-[80%] top-1/2 transform -translate-y-1/2 text-gray-400 "
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-6 w-6"
+          className="h-6 w-6 rounded-md bg-[#282B57] "
           viewBox="0 0 20 20"
           fill="currentColor"
         >
@@ -40,7 +40,7 @@ const SearchInput = () => {
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-900 text-white">
+    <div className="min-h-screen bg-[#1F2143] text-white">
       <header className="flex justify-between items-center p-6 container mx-auto">
         <div className="text-2xl font-bold text-white">NexLearn</div>
         <nav>
@@ -67,8 +67,6 @@ function App() {
             className="max-w-full h-auto object-contain"
           />
         </div>
-
-        {/* O'ng tomondagi matn va qidiruv qismi */}
         <div className="w-1/2 space-y-6 pl-12">
           <h1 className="text-5xl font-bold leading-tight">
             Grow Your Skills <br />
@@ -83,9 +81,9 @@ function App() {
             <SearchInput />
           </div>
 
-          <div className="space-y-3">
+          <div className="space-y-8">
             <span className="block text-gray-400">Suggestions:</span>
-            <div className="flex flex-wrap gap-2">
+            <div className="flex  flex-wrap gap-4  mt-8">
               {[
                 "UI UX Design",
                 "CSS Fundamental",
@@ -96,7 +94,7 @@ function App() {
               ].map((suggestion) => (
                 <button
                   key={suggestion}
-                  className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm hover:bg-blue-700 hover:text-white transition"
+                  className=" text-gray-300 px-3 py-2 border border-gray-300 rounded-md  bg-[#282B57] p-4 text-sm hover:bg-blue-600 hover:text-white transition-all duration-300"
                 >
                   {suggestion}
                 </button>
