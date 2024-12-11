@@ -65,7 +65,6 @@ function Navbar() {
           </ul>
         </nav>
         <div className="flex items-center space-x-4">
-          {/* Language Dropdown */}
           <div className="relative">
             <button
               onClick={toggleDropdown}
@@ -80,7 +79,7 @@ function Navbar() {
                   <button
                     key={lang}
                     onClick={() => selectLanguage(lang)}
-                    className="w-full px-3 py-2 text-left hover:bg-blue-600 hover:text-white"
+                    className="w-full px-3 py-2 text-left hover:bg-blue-50 hover:text-white"
                   >
                     {lang}
                   </button>
@@ -88,7 +87,7 @@ function Navbar() {
               </div>
             )}
           </div>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">
+          <button className="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">
             Login
           </button>
         </div>
